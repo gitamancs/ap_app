@@ -7,7 +7,6 @@ requests==2.32.3
 urllib3==2.2.2
 python-dateutil==2.9.0.post0
 uuid==1.30
-smtplib
 email==4.0.0  # Note: This is a built-in module, no external package needed
 csv==1.0  # Note: This is a built-in module, no external package needed
 azure-storage-blob==12.22.0
