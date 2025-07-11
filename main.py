@@ -17,7 +17,7 @@ import csv
 from io import StringIO
 from azure.storage.blob import BlobServiceClient
 from azure.core.exceptions import ResourceNotFoundError
-from apps.ai_services.healthcare.input_json_AS import AS_input_json
+from input_json_AS import AS_input_json
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.DEBUG)
