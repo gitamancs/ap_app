@@ -140,7 +140,7 @@ def send_appointment_email(appointment_data):
         msg.attach(MIMEText(body, 'plain'))
         with smtplib.SMTP('smtp.gmail.com', 587) as server:
             server.starttls()
-            server.login(os.getenv("ASemail"), os.getenv("ASappwd"))
+            server.login("care@quantum-i.ai", "aaxmveipnpemffwp")
             server.send_message(msg)
         logger.debug(f"Email sent to {appointment_data['Email']}")
         return True
