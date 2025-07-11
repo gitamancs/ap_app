@@ -523,6 +523,12 @@ def filter_doctors(conversation_id: str, chat_history: List[Dict[str, str]]) -> 
         conversations[conversation_id] = state
         return ChatResponse(message=bot_message, state='ask_appointment_date')
 
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+@app.get("/")
+async def read_root():
+    return {"message": "Welcome to the Appointment Chatbot API! Visit /docs for API documentation."}
+
 @app.post("/start")
 def start_conversation():
     conversation_id = str(uuid.uuid4())
